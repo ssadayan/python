@@ -1,0 +1,15 @@
+def twoNumberSum(array, targetSum):
+    array.sort()
+    if array == []:
+        return []
+    for b in array:
+       c = targetSum - b
+       if c in array:
+          return [b,c]
+    return []
+
+
+if __name__ == "__main__":
+    x = [9,3,1,2,5,4,8]
+    y = twoNumberSum(x,9)
+    print(y)
